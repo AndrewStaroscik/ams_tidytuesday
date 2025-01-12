@@ -1,11 +1,9 @@
-#%%
 # setup
 
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# %%
 # import and set data for time/date crosstab
 
 df = pd.read_csv('../data/2025/accidentSM.csv')
@@ -15,14 +13,12 @@ df['year'] = 2022
 df['date'] = pd.to_datetime(df[['year', 'MONTH', 'DAY']])
 df.head()
 
-# %%
 # Create the crosstab for the heatmap
 
 crossTab = pd.crosstab(index=df['HOUR'], columns=df['date'])
 crossTab = crossTab[crossTab.index != 99]
 crossTab.head()
 
-# %%
 # create the heatmap
 
 full_date_range = pd.date_range(start='2022-01-01', end='2022-12-31', freq='D')
@@ -56,5 +52,3 @@ plt.ylabel('Hour', fontsize=20)
 plt.tight_layout(rect=[0.025, 0.025, 1, 1])
 plt.savefig('./fatalAccidentDayAndTime2022.png', dpi=120)
 plt.show()  
-
-# %%

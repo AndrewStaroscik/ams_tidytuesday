@@ -21,3 +21,13 @@ df.to_csv('../data/2025/accidentSM.csv', index=False)
 
 ```
 
+## Chart Description
+
+Heat map showing time and date of a year of fatal accidents. 
+
+Some observations:
+
+* The alternating high and low numbers of accidents along the bottom are likely related to early morning drunk driving, numbers appear to peak around bar closing times and with more accidents occurring later in the week and on the weekends.
+* The curved pattern across the top shows variation in accident times that follow changes in daylight inidicating that visibility at and after dusk contributes to the accident rates. 
+* Dusk/early evening accidents are more frequent later in the year. 
+* New Years Eve shows up as dark areas at the bottom left (morning of Jan 01 2022), and top right (evening of Dec 31 2022).
